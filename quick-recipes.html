@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.29.1">
+    <meta name="project" content="LiveView Recipes v0.1.0">
+
+    <title>Cheatsheet User Guide — LiveView Recipes v0.1.0</title>
+    <link rel="stylesheet" href="dist/html-elixir-V2ETBPMB.css" />
+
+      <style>@media print { @page { size: landscape; } }</style>
+
+
+    <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
+    <script src="dist/handlebars.templates-IV5W3OL2.js"></script>
+    <script src="dist/sidebar_items-673F88FD.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/html-XN2TSG4M.js"></script>
+
+
+  </head>
+  <body data-type="extras" class="page-cheatmd">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+<button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+  <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+</button>
+
+<section class="sidebar">
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="https://lubien.me" class="sidebar-projectName" translate="no">
+LiveView Recipes
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.1.0
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="icon-action display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/lubien/liveview-recipes/blob/main/quick-recipes.cheatmd#L1" title="View Source" class="icon-action" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+
+    <button onclick="window.print()" title="Print Cheatsheet" class="icon-action" rel="print">
+      <i class="ri-printer-line" aria-hidden="true"></i>
+      <span class="sr-only">Print cheatsheet</span>
+    </button>
+
+  <span>Cheatsheet User Guide</span>
+</h1>
+
+<p>This document is a cheatsheet on how to use cheatsheets.
+Cheatsheets are Markdown files with the <code class="inline">.cheatmd</code> extension. You may also check the source of this document as a reference.</p><section class="h2 col-2"><h2 id="i-m-a-h2-title-with-2-columns" class="col-2 section-heading">
+  <a href="#i-m-a-h2-title-with-2-columns" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">i-m-a-h2-title-with-2-columns</p>
+  </a>
+  I'm a H2 title with 2 columns
+</h2>
+<section class="h3"><h3 id="i-m-a-h3-title" class="section-heading">
+  <a href="#i-m-a-h3-title" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">i-m-a-h3-title</p>
+  </a>
+  I'm a H3 title
+</h3>
+<h4>I'm a H4 title.</h4><p>And this is a paragraph.</p></section><section class="h3"><h3 id="code" class="section-heading">
+  <a href="#code" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">code</p>
+  </a>
+  Code
+</h3>
+<pre><code class="makeup elixir" translate="no"><span class="c1"># hello.exs</span><span class="w">
+</span><span class="kd">defmodule</span><span class="w"> </span><span class="nc">Greeter</span><span class="w"> </span><span class="k" data-group-id="6675209265-1">do</span><span class="w">
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">greet</span><span class="p" data-group-id="6675209265-2">(</span><span class="n">name</span><span class="p" data-group-id="6675209265-2">)</span><span class="w"> </span><span class="k" data-group-id="6675209265-3">do</span><span class="w">
+    </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, &quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="w">
+    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="w"> </span><span class="n">message</span><span class="w">
+  </span><span class="k" data-group-id="6675209265-3">end</span><span class="w">
+</span><span class="k" data-group-id="6675209265-1">end</span><span class="w">
+
+</span><span class="nc">Greeter</span><span class="o">.</span><span class="n">greet</span><span class="p" data-group-id="6675209265-4">(</span><span class="s">&quot;world&quot;</span><span class="p" data-group-id="6675209265-4">)</span></code></pre></section><section class="h3"><h3 id="paragraphs" class="section-heading">
+  <a href="#paragraphs" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">paragraphs</p>
+  </a>
+  Paragraphs
+</h3>
+<p>Paragraphs are also supported and can quote <code class="inline">code</code>.</p><p>Several paragraphs are visually distinct.</p></section><section class="h3"><h3 id="lists" class="section-heading">
+  <a href="#lists" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">lists</p>
+  </a>
+  Lists
+</h3>
+<ul><li>Element 1</li><li>Element 2</li><li><code class="inline">piece of code</code></li></ul></section><section class="h3"><h3 id="table" class="section-heading">
+  <a href="#table" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">table</p>
+  </a>
+  Table
+</h3>
+<h4>Date (H4 header)</h4><table><thead><tr><th style="text-align: left;">Example</th><th style="text-align: left;">Output</th></tr></thead><tbody><tr><td style="text-align: left;"><code class="inline">%m/%d/%Y</code></td><td style="text-align: left;"><code class="inline">06/05/2013</code></td></tr><tr><td style="text-align: left;"><code class="inline">%A, %B %e, %Y</code></td><td style="text-align: left;"><code class="inline">Sunday, June 5, 2013</code></td></tr><tr><td style="text-align: left;"><code class="inline">%b %e %a</code></td><td style="text-align: left;"><code class="inline">Jun 5 Sun</code></td></tr></tbody></table></section></section><section class="h2 col-2"><h2 id="variants" class="col-2 section-heading">
+  <a href="#variants" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variants</p>
+  </a>
+  Variants
+</h2>
+<section class="h3"><h3 id="adding-variants" class="section-heading">
+  <a href="#adding-variants" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">adding-variants</p>
+  </a>
+  Adding variants
+</h3>
+<pre><code class="makeup elixir" translate="no"><span class="c1">## H2</span><span class="w">
+</span><span class="p" data-group-id="4414200217-1">{</span><span class="p">:</span><span class="w"> </span><span class="o">.</span><span class="n">col</span><span class="o">-</span><span class="mi">2</span><span class="p" data-group-id="4414200217-1">}</span><span class="w">
+
+</span><span class="c1">### H3</span><span class="w">
+</span><span class="p" data-group-id="4414200217-2">{</span><span class="p">:</span><span class="w"> </span><span class="o">.</span><span class="n">list</span><span class="o">-</span><span class="mi">6</span><span class="p" data-group-id="4414200217-2">}</span><span class="w">
+
+</span><span class="o">*</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="o">*</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="mi">2</span></code></pre><p>Variants customize how your cheatsheet looks like via Markdown's inline attribute notation.</p></section><section class="h3"><h3 id="header-variants" class="section-heading">
+  <a href="#header-variants" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">header-variants</p>
+  </a>
+  Header variants
+</h3>
+<h4>H2</h4><table><tbody><tr><td style="text-align: left;"><code class="inline">.col-2</code></td><td style="text-align: left;">two-columns</td></tr><tr><td style="text-align: left;"><code class="inline">.col-3</code></td><td style="text-align: left;">three-columns</td></tr><tr><td style="text-align: left;"><code class="inline">.col-2-left</code></td><td style="text-align: left;">two-columns (1/3 - 2/3)</td></tr></tbody></table><h4>H3</h4><table><tbody><tr><td style="text-align: left;"><code class="inline">.list-4</code></td><td style="text-align: left;">four-columns for lists</td></tr><tr><td style="text-align: left;"><code class="inline">.list-6</code></td><td style="text-align: left;">six-columns for lists</td></tr></tbody></table></section></section><section class="h2 col-3"><h2 id="code-1" class="col-3 section-heading">
+  <a href="#code-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">code-1</p>
+  </a>
+  Code
+</h2>
+<section class="h3"><h3 id="code-with-headings" class="section-heading">
+  <a href="#code-with-headings" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">code-with-headings</p>
+  </a>
+  Code with headings
+</h3>
+<h4>index.ex</h4><pre><code class="makeup elixir" translate="no"><span class="nc">Path</span><span class="o">.</span><span class="n">join</span><span class="p" data-group-id="8437716814-1">(</span><span class="p" data-group-id="8437716814-2">[</span><span class="s">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;foo&quot;</span><span class="p" data-group-id="8437716814-2">]</span><span class="p" data-group-id="8437716814-1">)</span><span class="w">
+</span><span class="s">&quot;~/foo&quot;</span></code></pre><h4>other.ex</h4><pre><code class="makeup elixir" translate="no"><span class="nc">Path</span><span class="o">.</span><span class="n">join</span><span class="p" data-group-id="8507092989-1">(</span><span class="p" data-group-id="8507092989-2">[</span><span class="s">&quot;foo&quot;</span><span class="p" data-group-id="8507092989-2">]</span><span class="p" data-group-id="8507092989-1">)</span><span class="w">
+</span><span class="s">&quot;foo&quot;</span></code></pre><p>Code blocks can have headings.</p></section><section class="h3"><h3 id="long-lines" class="section-heading">
+  <a href="#long-lines" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">long-lines</p>
+  </a>
+  Long lines
+</h3>
+<pre><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">MyTracer</span><span class="w"> </span><span class="k" data-group-id="4466480950-1">do</span><span class="w">
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">trace</span><span class="p" data-group-id="4466480950-2">(</span><span class="p" data-group-id="4466480950-3">{</span><span class="ss">:remote_function</span><span class="p">,</span><span class="w"> </span><span class="c">_meta</span><span class="p">,</span><span class="w"> </span><span class="n">module</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">arity</span><span class="p" data-group-id="4466480950-3">}</span><span class="p">,</span><span class="w"> </span><span class="n">env</span><span class="p" data-group-id="4466480950-2">)</span><span class="w"> </span><span class="k" data-group-id="4466480950-4">do</span><span class="w">
+    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="w"> </span><span class="s">&quot;</span><span class="si" data-group-id="4466480950-5">#{</span><span class="n">env</span><span class="o">.</span><span class="n">file</span><span class="si" data-group-id="4466480950-5">}</span><span class="s">:</span><span class="si" data-group-id="4466480950-6">#{</span><span class="n">env</span><span class="o">.</span><span class="n">line</span><span class="si" data-group-id="4466480950-6">}</span><span class="s"> </span><span class="si" data-group-id="4466480950-7">#{</span><span class="n">inspect</span><span class="p" data-group-id="4466480950-8">(</span><span class="n">module</span><span class="p" data-group-id="4466480950-8">)</span><span class="si" data-group-id="4466480950-7">}</span><span class="s">.</span><span class="si" data-group-id="4466480950-9">#{</span><span class="n">name</span><span class="si" data-group-id="4466480950-9">}</span><span class="s">/</span><span class="si" data-group-id="4466480950-10">#{</span><span class="n">arity</span><span class="si" data-group-id="4466480950-10">}</span><span class="s">&quot;</span><span class="w">
+    </span><span class="ss">:ok</span><span class="w">
+  </span><span class="k" data-group-id="4466480950-4">end</span><span class="w">
+
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">trace</span><span class="p" data-group-id="4466480950-11">(</span><span class="c">_event</span><span class="p">,</span><span class="w"> </span><span class="c">_env</span><span class="p" data-group-id="4466480950-11">)</span><span class="w"> </span><span class="k" data-group-id="4466480950-12">do</span><span class="w">
+    </span><span class="ss">:ok</span><span class="w">
+  </span><span class="k" data-group-id="4466480950-12">end</span><span class="w">
+</span><span class="k" data-group-id="4466480950-1">end</span></code></pre><p>Long lines show scrollbars.</p></section><section class="h3"><h3 id="line-wrapping" class="section-heading">
+  <a href="#line-wrapping" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">line-wrapping</p>
+  </a>
+  Line wrapping
+</h3>
+<pre class="wrap"><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">MyTracer</span><span class="w"> </span><span class="k" data-group-id="4491016240-1">do</span><span class="w">
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">trace</span><span class="p" data-group-id="4491016240-2">(</span><span class="p" data-group-id="4491016240-3">{</span><span class="ss">:remote_function</span><span class="p">,</span><span class="w"> </span><span class="c">_meta</span><span class="p">,</span><span class="w"> </span><span class="n">module</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">arity</span><span class="p" data-group-id="4491016240-3">}</span><span class="p">,</span><span class="w"> </span><span class="n">env</span><span class="p" data-group-id="4491016240-2">)</span><span class="w"> </span><span class="k" data-group-id="4491016240-4">do</span><span class="w">
+    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="w"> </span><span class="s">&quot;</span><span class="si" data-group-id="4491016240-5">#{</span><span class="n">env</span><span class="o">.</span><span class="n">file</span><span class="si" data-group-id="4491016240-5">}</span><span class="s">:</span><span class="si" data-group-id="4491016240-6">#{</span><span class="n">env</span><span class="o">.</span><span class="n">line</span><span class="si" data-group-id="4491016240-6">}</span><span class="s"> </span><span class="si" data-group-id="4491016240-7">#{</span><span class="n">inspect</span><span class="p" data-group-id="4491016240-8">(</span><span class="n">module</span><span class="p" data-group-id="4491016240-8">)</span><span class="si" data-group-id="4491016240-7">}</span><span class="s">.</span><span class="si" data-group-id="4491016240-9">#{</span><span class="n">name</span><span class="si" data-group-id="4491016240-9">}</span><span class="s">/</span><span class="si" data-group-id="4491016240-10">#{</span><span class="n">arity</span><span class="si" data-group-id="4491016240-10">}</span><span class="s">&quot;</span><span class="w">
+    </span><span class="ss">:ok</span><span class="w">
+  </span><span class="k" data-group-id="4491016240-4">end</span><span class="w">
+
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">trace</span><span class="p" data-group-id="4491016240-11">(</span><span class="c">_event</span><span class="p">,</span><span class="w"> </span><span class="c">_env</span><span class="p" data-group-id="4491016240-11">)</span><span class="w"> </span><span class="k" data-group-id="4491016240-12">do</span><span class="w">
+    </span><span class="ss">:ok</span><span class="w">
+  </span><span class="k" data-group-id="4491016240-12">end</span><span class="w">
+</span><span class="k" data-group-id="4491016240-1">end</span></code></pre><p>Add <code class="inline">wrap</code> to wrap long lines.</p></section></section><section class="h2 col-2"><h2 id="lists-1" class="col-2 section-heading">
+  <a href="#lists-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">lists-1</p>
+  </a>
+  Lists
+</h2>
+<section class="h3"><h3 id="bullet-lists" class="section-heading">
+  <a href="#bullet-lists" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">bullet-lists</p>
+  </a>
+  Bullet lists
+</h3>
+<ul><li>This is</li><li>a list</li><li>with a few items</li></ul></section><section class="h3"><h3 id="ordered-lists" class="section-heading">
+  <a href="#ordered-lists" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">ordered-lists</p>
+  </a>
+  Ordered lists
+</h3>
+<ol><li>I'm first;</li><li>You are second;</li><li>We are third;</li></ol><p>Here's an extra paragraph after the list.</p></section><section class="h3"><h3 id="with-headings-and-code-links" class="section-heading">
+  <a href="#with-headings-and-code-links" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">with-headings-and-code-links</p>
+  </a>
+  With headings and code links
+</h3>
+<h4>Part 1</h4><ul><li><a href="https://hexdocs.pm/elixir/Kernel.html#is_atom/1"><code class="inline">is_atom/1</code></a></li><li><a href="https://hexdocs.pm/elixir/Kernel.html#is_binary/1"><code class="inline">is_binary/1</code></a></li><li><a href="https://hexdocs.pm/elixir/Kernel.html#is_number/1"><code class="inline">is_number/1</code></a></li></ul><h4>Part 2</h4><ul><li><a href="https://hexdocs.pm/elixir/Kernel.html#length/1"><code class="inline">length/1</code></a></li><li><a href="https://hexdocs.pm/elixir/Kernel.html#elem/2"><code class="inline">elem/2</code></a></li></ul></section></section><section class="h2"><h2 id="list-columns" class="section-heading">
+  <a href="#list-columns" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">list-columns</p>
+  </a>
+  List columns
+</h2>
+<section class="h3 list-6"><h3 id="six-columns" class="list-6 section-heading">
+  <a href="#six-columns" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">six-columns</p>
+  </a>
+  Six columns
+</h3>
+<ul><li>One</li><li>Two</li><li>Three</li><li>Four</li><li>Five</li><li>Six</li><li>Seven</li><li>Eight</li><li>Nine</li><li>Ten</li><li>Eleven</li></ul><p>Add <code class="inline">{: .list-6}</code> after the H3 title to make large lists.</p></section><section class="h3 list-4"><h3 id="four-columns" class="list-4 section-heading">
+  <a href="#four-columns" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">four-columns</p>
+  </a>
+  Four columns
+</h3>
+<ul><li>One</li><li>Two</li><li>Three</li><li>Four</li><li>Five</li><li>Six</li><li>Seven</li><li>Eight</li><li>Nine</li><li>Ten</li><li>Eleven</li></ul><p>Add <code class="inline">{: .list-4}</code> after the H3 title to make large lists.</p></section></section><section class="h2"><h2 id="full-page" class="section-heading">
+  <a href="#full-page" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">full-page</p>
+  </a>
+  Full page
+</h2>
+<p>This is the default.</p></section><section class="h2 width-50"><h2 id="half-width" class="width-50 section-heading">
+  <a href="#half-width" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">half-width</p>
+  </a>
+  Half width
+</h2>
+<section class="h3"><h3 id="i-make-tables-look-nicer" class="section-heading">
+  <a href="#i-make-tables-look-nicer" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">i-make-tables-look-nicer</p>
+  </a>
+  I make tables look nicer
+</h3>
+<h4>Time</h4><table><thead><tr><th style="text-align: left;">Example</th><th style="text-align: left;">Output</th></tr></thead><tbody><tr><td style="text-align: left;"><code class="inline">%H:%M</code></td><td style="text-align: left;"><code class="inline">23:05</code></td></tr><tr><td style="text-align: left;"><code class="inline">%I:%M %p</code></td><td style="text-align: left;"><code class="inline">11:05 PM</code></td></tr></tbody></table><p>Add <code class="inline">{: .width-50}</code> after the H2 title to use only half width.</p></section></section><section class="h2 col-2-left"><h2 id="column-left-reference" class="col-2-left section-heading">
+  <a href="#column-left-reference" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">column-left-reference</p>
+  </a>
+  Column left reference
+</h2>
+<section class="h3"><h3 id="one" class="section-heading">
+  <a href="#one" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">one</p>
+  </a>
+  One
+</h3>
+<pre><code class="makeup elixir" translate="no"><span class="c1"># hello.exs</span><span class="w">
+</span><span class="kd">defmodule</span><span class="w"> </span><span class="nc">Greeter</span><span class="w"> </span><span class="k" data-group-id="5993515253-1">do</span><span class="w">
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">greet</span><span class="p" data-group-id="5993515253-2">(</span><span class="n">name</span><span class="p" data-group-id="5993515253-2">)</span><span class="w"> </span><span class="k" data-group-id="5993515253-3">do</span><span class="w">
+    </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, &quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="w">
+    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="w"> </span><span class="n">message</span><span class="w">
+  </span><span class="k" data-group-id="5993515253-3">end</span><span class="w">
+</span><span class="k" data-group-id="5993515253-1">end</span><span class="w">
+
+</span><span class="nc">Greeter</span><span class="o">.</span><span class="n">greet</span><span class="p" data-group-id="5993515253-4">(</span><span class="s">&quot;world&quot;</span><span class="p" data-group-id="5993515253-4">)</span></code></pre></section><section class="h3"><h3 id="two" class="section-heading">
+  <a href="#two" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">two</p>
+  </a>
+  Two
+</h3>
+<pre><code class="makeup elixir" translate="no"><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="2322940487-1">%{</span><span class="w">
+  </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="ss">city</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Melbourne&quot;</span><span class="w">
+</span><span class="p" data-group-id="2322940487-1">}</span></code></pre><pre><code class="makeup elixir" translate="no"><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="w"> </span><span class="s">&quot;Hello, &quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">user</span><span class="o">.</span><span class="n">name</span></code></pre></section><section class="h3"><h3 id="three" class="section-heading">
+  <a href="#three" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">three</p>
+  </a>
+  Three
+</h3>
+<ul><li>Yet</li><li>Another</li><li>List</li></ul></section><section class="h3"><h3 id="four" class="section-heading">
+  <a href="#four" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">four</p>
+  </a>
+  Four
+</h3>
+<p>I'm a grid, with 1/3 - 2/3 width.</p></section></section>
+<div class="bottom-actions">
+  <div class="bottom-actions-item">
+
+      <a href="readme.html" class="bottom-actions-button" rel="prev">
+        <span class="subheader">
+          ← Previous Page
+        </span>
+        <span class="title">
+LiveviewRecipes
+        </span>
+      </a>
+
+  </div>
+  <div class="bottom-actions-item">
+
+  </div>
+</div>
+      <footer class="footer">
+        <p>
+
+          <span class="line">
+            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+              Search HexDocs
+            </button>
+
+              <a href="LiveView Recipes.epub" title="ePub version">
+                Download ePub version
+              </a>
+
+          </span>
+        </p>
+
+        <p class="built-using">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.1) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+  </body>
+</html>
