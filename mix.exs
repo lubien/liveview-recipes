@@ -18,7 +18,7 @@ defmodule LiveviewRecipes.MixProject do
       docs: [
         main: "LiveviewRecipes", # The main page in the docs
         # logo: "path/to/logo.png",
-        extras: ["README.md", "quick-recipes.cheatmd"]
+        extras: ["README.md", "recipe-assigns.cheatmd"]
       ]
     ]
   end

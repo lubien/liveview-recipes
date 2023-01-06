@@ -1,0 +1,55 @@
+# Assign Cheatsheet
+
+This page will help you learn simple patterns to assigns things into your LiveView sockets.
+
+## How to assign on mount?
+{: .col-2}
+
+### Simple
+
+#### single-assign.ex
+
+```
+def mount(_params, _session, socket) do
+  {:ok, assign(socket, :my_value, 10)}
+end
+```
+
+#### multiple-assigns.ex
+
+```
+def mount(_params, _session, socket) do
+  {:ok, assign(socket, my_value: 10, other_value: 20)}
+end
+```
+
+Useful when you don't have a lot of assigns
+
+### Many assigns
+
+#### reassign-socket.ex
+
+```elixir
+def mount(_params, _session, socket) do
+  socket =
+    socket
+    |> assign(:first, 1)
+    |> assign(:second, 2)
+
+  {:ok, socket}
+end
+```
+
+#### pipe-directly-on-return.ex
+
+```elixir
+def mount(_params, _session, socket) do
+  {:ok,
+    socket
+    |> assign(:first, 1)
+    |> assign(:second, 2)
+  }
+end
+```
+
+Sometimes you just need to assign a lot of things
